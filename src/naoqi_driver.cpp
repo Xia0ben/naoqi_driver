@@ -544,7 +544,7 @@ void Driver::registerDefaultConverter()
   bool info_enabled                   = boot_config_.get( "converters.info.enabled", true);
   size_t info_frequency               = boot_config_.get( "converters.info.frequency", 1);
 
-  bool audio_enabled                  = boot_config_.get( "converters.audio.enabled", true);
+  bool audio_enabled                  = boot_config_.get( "converters.audio.enabled", false);
   size_t audio_frequency              = boot_config_.get( "converters.audio.frequency", 1);
 
   bool logs_enabled                   = boot_config_.get( "converters.logs.enabled", true);
@@ -564,24 +564,24 @@ void Driver::registerDefaultConverter()
   size_t camera_front_fps             = boot_config_.get( "converters.front_camera.fps", 10);
   size_t camera_front_recorder_fps    = boot_config_.get( "converters.front_camera.recorder_fps", 5);
 
-  bool camera_bottom_enabled          = boot_config_.get( "converters.bottom_camera.enabled", true);
+  bool camera_bottom_enabled          = boot_config_.get( "converters.bottom_camera.enabled", false);
   size_t camera_bottom_resolution     = boot_config_.get( "converters.bottom_camera.resolution", 1); // VGA
   size_t camera_bottom_fps            = boot_config_.get( "converters.bottom_camera.fps", 10);
   size_t camera_bottom_recorder_fps   = boot_config_.get( "converters.bottom_camera.recorder_fps", 5);
 
   size_t camera_depth_resolution;
-  bool camera_depth_enabled             = boot_config_.get( "converters.depth_camera.enabled", true);
+  bool camera_depth_enabled             = boot_config_.get( "converters.depth_camera.enabled", false);
   size_t camera_depth_xtion_resolution  = boot_config_.get( "converters.depth_camera.xtion_resolution", 1); // QVGA
   size_t camera_depth_stereo_resolution = boot_config_.get( "converters.depth_camera.stereo_resolution", 9); // Q720p
   size_t camera_depth_fps               = boot_config_.get( "converters.depth_camera.fps", 10);
   size_t camera_depth_recorder_fps      = boot_config_.get( "converters.depth_camera.recorder_fps", 5);
 
-  bool camera_stereo_enabled          = boot_config_.get( "converters.stereo_camera.enabled", true);
+  bool camera_stereo_enabled          = boot_config_.get( "converters.stereo_camera.enabled", false);
   size_t camera_stereo_resolution     = boot_config_.get( "converters.stereo_camera.resolution", 15); // QQ720px2
   size_t camera_stereo_fps            = boot_config_.get( "converters.stereo_camera.fps", 10);
   size_t camera_stereo_recorder_fps    = boot_config_.get( "converters.stereo_camera.recorder_fps", 5);
 
-  bool camera_ir_enabled              = boot_config_.get( "converters.ir_camera.enabled", true);
+  bool camera_ir_enabled              = boot_config_.get( "converters.ir_camera.enabled", false);
   size_t camera_ir_resolution         = boot_config_.get( "converters.ir_camera.resolution", 1); // QVGA
   size_t camera_ir_fps                = boot_config_.get( "converters.ir_camera.fps", 10);
   size_t camera_ir_recorder_fps       = boot_config_.get( "converters.ir_camera.recorder_fps", 5);
