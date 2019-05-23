@@ -6,14 +6,14 @@
     {
       "enabled"       : true,
       "resolution"    : 1,
-      "fps"           : 5,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "bottom_camera":
     {
-      "enabled"       : false,
+      "enabled"       : true,
       "resolution"    : 1,
-      "fps"           : 5,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "depth_camera":
@@ -21,12 +21,12 @@
       "enabled"       : true,
       "xtion_resolution": 1,
       "stereo_resolution": 9,
-      "fps"           : 5,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "stereo_camera":
     {
-      "enabled"       : false,
+      "enabled"       : true,
       "resolution"    : 15,
       "fps"           : 10,
       "recorder_fps"  : 5
@@ -35,7 +35,7 @@
     {
       "enabled"       : true,
       "resolution"    : 1,
-      "fps"           : 5,
+      "fps"           : 10,
       "recorder_fps"  : 5
     },
     "info":
@@ -50,7 +50,7 @@
     },
     "diag":
     {
-      "enabled"       : false,
+      "enabled"       : true,
       "frequency"     : 1
     },
     "imu_torso":
@@ -61,12 +61,12 @@
     "imu_base":
     {
       "enabled"       : true,
-      "frequency"     : 15
+      "frequency"     : 10
     },
     "joint_states":
     {
       "enabled"       : true,
-      "frequency"     : 30
+      "frequency"     : 50
     },
     "laser":
     {
@@ -76,11 +76,11 @@
     "sonar":
     {
       "enabled"       : true,
-      "frequency"     : 2
+      "frequency"     : 10
     },
     "audio":
     {
-      "enabled"       : false
+      "enabled"       : true
     },
     "bumper":
     {
@@ -97,7 +97,7 @@
     "odom":
     {
       "enabled"       : true,
-      "frequency"     : 20
+      "frequency"     : 15
     }
   }
 }
