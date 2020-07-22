@@ -57,15 +57,26 @@ SonarConverter::SonarConverter( const std::string& name, const float& frequency,
 
   // Prepare the messages
   msgs_.resize(frames_.size());
-  for(size_t i = 0; i < msgs_.size(); ++i)
-    {
-      msgs_[i].header.frame_id = frames_[i];
-      msgs_[i].min_range = 0.25;
-      msgs_[i].max_range = 2.55;
-      msgs_[i].field_of_view = 0.523598776;
-      msgs_[i].radiation_type = sensor_msgs::Range::ULTRASOUND;
+  if (robot_ == robot::PEPPER) {
+    printf("\n\n Creating range message for Pepper \n\n");
+    for(size_t i = 0; i < msgs_.size(); ++i){
+        msgs_[i].header.frame_id = frames_[i];
+        msgs_[i].min_range = 0.3;
+        msgs_[i].max_range = 1.5;   // Default : 5.0
+        msgs_[i].field_of_view = 0.8377;   // Default : 1.0472
+        msgs_[i].radiation_type = sensor_msgs::Range::ULTRASOUND;
     }
-
+  }
+  else if (robot_ == robot::NAO) {
+    printf("\n\n Creating range message for Nao \n\n");
+    for(size_t i = 0; i < msgs_.size(); ++i){
+        msgs_[i].header.frame_id = frames_[i];
+        msgs_[i].min_range = 0.25;
+        msgs_[i].max_range = 2.55;
+        msgs_[i].field_of_view = 0.523598776;
+        msgs_[i].radiation_type = sensor_msgs::Range::ULTRASOUND;
+    }
+  }
   keys_.resize(keys.size());
   size_t i = 0;
   for(std::vector<std::string>::const_iterator it = keys.begin(); it != keys.end(); ++it, ++i)
