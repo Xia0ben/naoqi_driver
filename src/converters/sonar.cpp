@@ -63,7 +63,7 @@ SonarConverter::SonarConverter( const std::string& name, const float& frequency,
         msgs_[i].header.frame_id = frames_[i];
         msgs_[i].min_range = 0.3;
         msgs_[i].max_range = 1.5;   // Default : 5.0
-        msgs_[i].field_of_view = 0.8377;   // Default : 1.0472
+        msgs_[i].field_of_view = 1.0472;
         msgs_[i].radiation_type = sensor_msgs::Range::ULTRASOUND;
     }
   }
